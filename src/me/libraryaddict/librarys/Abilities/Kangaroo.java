@@ -30,4 +30,15 @@ public class Kangaroo extends AbilityListener implements Disableable {
             }
         }
     }
+    
+        @EventHandler
+	public void onPlayerDamage(EntityDamageEvent f){
+		if (f.getEntity() instanceof Player){
+			Player p = (Player) f.getEntity();
+			if( f.getCause() == DamageCause.FALL ){
+			     if isSpecialItem(event.getItem(), kangarooBootsName)) {
+			      if (f.getDamage() > 6){
+			      f.setDamage(6.0);
+			      }
+			    }
 }
